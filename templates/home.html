@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="home-page">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Bio Section (Left) -->
+            <div class="col-lg-6 bio-section" data-aos="fade-right">
+                <div class="bio-content">
+                    <h1 class="hero-title">Munieb Abdelrahman</h1>
+                    <h2 class="bio-subtitle">AI Engineer & Software Developer</h2>
+                    <div class="bio-text">
+                        <p class="typing-text">Technology enthusiast specializing in AI and software development, with expertise in machine learning and computer vision.</p>
+                        
+                        <div class="skills-section">
+                            <h3>Core Skills</h3>
+                            <div class="skill-pills">
+                                <span class="skill-pill">Machine Learning</span>
+                                <span class="skill-pill">Computer Vision</span>
+                                <span class="skill-pill">NLP</span>
+                                <span class="skill-pill">Full Stack Development</span>
+                                <span class="skill-pill">Cloud Computing</span>
+                            </div>
+                        </div>
+
+                        <div class="experience-timeline">
+                            <h3>Experience Highlights</h3>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Software Developer</h4>
+                                    <p>BIOTECTIVE - Disease Resource Centre (DRC) Platform</p>
+                                    <span class="timeline-date">Sep 2024 - Present</span>
+                                    <ul class="timeline-details">
+                                        <li>Led development of AI-powered healthcare management platform using Laravel and React.js (TypeScript)</li>
+                                        <li>Implemented advanced medical AI chatbot integrated with EHR systems, reducing information retrieval time by 60%</li>
+                                        <li>Designed and deployed multi-modal patient analysis system, improving diagnostic efficiency by 40%</li>
+                                        <li>Built secure role-based access system with integrated AI-driven anomaly detection</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>Web Developer Intern</h4>
+                                    <p>Safe Way Safety and Security Consultancy</p>
+                                    <span class="timeline-date">Dec 2023 - Feb 2024</span>
+                                    <ul class="timeline-details">
+                                        <li>Designed and developed responsive websites using HTML, CSS, JavaScript, Node.js, React, MongoDB, and Express.js, improving website traffic by 30%</li>
+                                        <li>Managed frontend and backend development, demonstrating adaptability and prioritization skills, reducing website load time by 25%</li>
+                                        <li>Enhanced user engagement by incorporating interactive elements and animations, leading to a 20% increase in course registrations</li>
+                                        <li>Collaborated effectively with the backend team to integrate frontend and backend systems, ensuring seamless user experiences</li>
+                                        <li>Conducted website performance evaluations and implemented optimizations, reducing bounce rates by 15%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Section (Right) -->
+            <div class="col-lg-6 projects-section" data-aos="fade-left">
+                <div class="projects-grid">
+                    <!-- AI Section -->
+                    <div class="project-section" 
+                        data-url="{% url 'ai_projects' %}" 
+                        data-type="ai"
+                       onclick="transitionToPage('{% url 'ai_projects' %}', 'ai')"
+                        <div class="brain-container">
+                            <canvas id="neural-network"></canvas>
+                            <div class="content-overlay" id="ai-zoom-target"> <!-- Added zoom target -->
+                                <h2 class="project-title">Artificial Intelligence</h2>
+                                <p class="project-description">Explore my AI and ML projects</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-section"
+                        data-url="{% url 'software_dev' %}" 
+                        data-type="software"
+                        onclick="transitionToPage('{% url 'software_dev' %}', 'software')">
+                        <div class="laptop-container">
+                            <canvas id="matrix-canvas"></canvas>
+                            <div class="content-overlay" id="software-zoom-target"> <!-- Added zoom target -->
+                                <h2 class="project-title">Software Development</h2>
+                                <p class="project-description">View my software projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const neural = new NeuralNetwork("neural-network");
+    const matrix = new MatrixRain("matrix-canvas");
+    
+    // Add manual resize trigger if needed
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 100);
+});
+</script>
+
+<script src="{% static 'js/neural-network.js' %}"></script>
+<script src="{% static 'js/matrix-rain.js' %}"></script>
+{% endblock %}

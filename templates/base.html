@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munieb Abdelrahman - Portfolio</title>
+    
+    <!-- CSS Frameworks and Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animations.css' %}" rel="stylesheet">
+    <link href="{% static 'css/transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/projects.css' %}" rel="stylesheet">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-blur">
+        <div class="container">
+            <a class="navbar-brand animate-character" href="{% url 'home' %}">MA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="{% url 'ai_projects' %}">AI Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline-animation" href="{% url 'software_dev' %}">Software Dev</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="zoom-container">
+        <div class="zoom-content" id="page-content">
+            <main>
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/MuniebA" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/munieb-abdelrahman/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://huggingface.co/MuniebAbdelrahman" class="social-icon"><i class="fab fa-smile"></i></a>
+            </div>
+            <p class="copyright">© 2025 Munieb Abdelrahman. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    {% load static %}
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/transitions.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+.page-transition {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.zoom-container {
+    position: relative; /* Changed from fixed */
+    width: 100%;
+    min-height: 100vh;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+#page-content {
+    transform-origin: center center;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 1;
+    min-height: 100vh;
+    position: relative;
+}
+
+.zoom-out {
+    transform: scale(0.1);
+    opacity: 0;
+}
+
+.zoom-in {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 10000;
+    color: #64ffda;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+.zoom-content {
+    transform-origin: center center;
+    transition: transform 0.8s ease-in-out;
+}
+

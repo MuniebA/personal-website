@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link href="{% static 'css/projects.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="page-content software-page">
+    <div class="container py-5 mt-5">
+        <div class="back-button" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        
+        <h1 class="text-center mb-4 hero-title" style="font-size: 2rem; padding-top: 1rem;">Software Development Projects</h1>
+        
+        <div class="projects-container">
+            <!-- Safe Way Safety Internship -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-header">
+                    <h2 class="project-title">Safe Way Safety Web Development</h2>
+                    <div class="project-links">
+                        <a href="https://www.safewaysafety.org" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Developed and optimized responsive websites, improving traffic by 30% and reducing load times by 25%. Enhanced user engagement through interactive elements and seamless frontend-backend integration.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Express.js</span>
+                </div>
+            </div>
+
+            <!-- Disease Resource Centre Platform -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-header">
+                    <h2 class="project-title">Disease Resource Centre Platform</h2>
+                    <div class="project-links">
+                        <span class="tech-tag">In Progress</span>
+                    </div>
+                </div>
+                <p class="project-summary">Web-based healthcare management platform with features for patient monitoring, appointment management, and e-prescriptions using Laravel and React.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">MySQL</span>
+                </div>
+            </div>
+
+            <!-- Task Management System -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-header">
+                    <h2 class="project-title">Task Management System</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/Task-Tracking-System" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Comprehensive Android task management application with features like task creation, categorization, and priority setting.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">Kotlin</span>
+                    <span class="tech-tag">Android</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">MVVM</span>
+                </div>
+            </div>
+
+            <!-- EscapeQuest Puzzles -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-header">
+                    <h2 class="project-title">EscapeQuest Puzzles</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/Immersive-Escape-Room-Game-CPP-DSP" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Immersive puzzle-based escape room game demonstrating advanced data structures and OOP concepts.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">OOP</span>
+                    <span class="tech-tag">Data Structures</span>
+                    <span class="tech-tag">Visual Studio</span>
+                </div>
+            </div>
+
+            <!-- FoodEdge Catering System -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-header">
+                    <h2 class="project-title">FoodEdge Catering System</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/ManagingSoftwareProject_Django" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Web-based catering management system with features for clients, operations, and management.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Bootstrap</span>
+                </div>
+            </div>
+
+            <!-- Banking System -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-header">
+                    <h2 class="project-title">Banking System</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/Banking-System" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">C# object-oriented banking system managing users, accounts, and card transactions.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">.NET</span>
+                    <span class="tech-tag">OOP</span>
+                    <span class="tech-tag">NUnit</span>
+                </div>
+            </div>
+
+            <!-- Food Billing System -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="700">
+                <div class="project-header">
+                    <h2 class="project-title">Food Billing System</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/Food-Billing-System-Test-Cases-Documentation" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Web-based food billing system with comprehensive test documentation and automated testing.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Selenium</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+
+            <!-- Code Executor -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="800">
+                <div class="project-header">
+                    <h2 class="project-title">Code Executor</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/Code-Executor-python-Cpp-c-" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Containerized code execution system supporting multiple programming languages with security constraints.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">ASP.NET Core</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Blazor</span>
+                    <span class="tech-tag">WebAssembly</span>
+                </div>
+            </div>
+
+            <!-- IoT Education Platform (In Progress) -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="900">
+                <div class="project-header">
+                    <h2 class="project-title">IoT Education Platform</h2>
+                    <div class="project-links">
+                        <span class="tech-tag">In Progress</span>
+                    </div>
+                </div>
+                <p class="project-summary">Interactive platform for IoT education featuring learning modules, quizzes, projects, and AI-powered assistance.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">DeepSeek</span>
+                    <span class="tech-tag">SimulIDE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+
+    // Add active class to cards sequentially
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('active');
+        }, index * 150);
+    });
+});
+</script>
+{% endblock %}

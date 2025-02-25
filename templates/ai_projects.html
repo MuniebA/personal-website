@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link href="{% static 'css/projects.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="page-content ai-page">
+    <div class="container py-5 mt-5">
+        <div class="back-button" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        
+        <h1 class="text-center mb-4 hero-title" style="font-size: 2rem; padding-top: 1rem;">AI & Machine Learning Projects</h1>
+        
+        <div class="projects-container">
+            <!-- Plant Disease Identification -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-header">
+                    <h2 class="project-title">Plant Disease Identification</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/Out-Of-Distribution-Plant-Disease-Identification" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://huggingface.co/spaces/MuniebAbdelrahman/Crop-Disease-Classifier" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Dual-branch deep learning architecture for plant disease identification with out-of-distribution capabilities.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">Transfer Learning</span>
+                </div>
+            </div>
+
+            <!-- Retail Industry AI Vision -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-header">
+                    <h2 class="project-title">Retail Industry AI Vision</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/COS30018-INTELLIGENT-SYSTEM" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">AI vision system for out-of-stock detection and shelf organization in retail environments.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">Object Detection</span>
+                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">Flask</span>
+                </div>
+            </div>
+
+            <!-- RAG Documentation Assistant -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-header">
+                    <h2 class="project-title">RAG Documentation Assistant</h2>
+                    <div class="project-links">
+                        <a href="https://github.com/MuniebA/rag-doc-assistant" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Advanced documentation analysis tool using Retrieval Augmented Generation.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">HuggingFace</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">NLP</span>
+                </div>
+            </div>
+
+            <!-- Heart Disease Chatbot -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-header">
+                    <h2 class="project-title">Heart Disease Q&A Chatbot</h2>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/MuniebAbdelrahman/Heart_Disease_QA" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Interactive chatbot for heart disease information and queries.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">Transformers</span>
+                    <span class="tech-tag">HuggingFace</span>
+                    <span class="tech-tag">Python</span>
+                </div>
+            </div>
+
+            <!-- Bird Detection Model -->
+            <div class="project-card scale-in" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-header">
+                    <h2 class="project-title">Bird Species Classification</h2>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/MuniebAbdelrahman/Bird-image-classifier-dinov2" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <p class="project-summary">Comparative analysis of CNN and Vision Transformer models for bird species classification.</p>
+                <div class="project-technologies">
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">ViT</span>
+                    <span class="tech-tag">Deep Learning</span>
+                    <span class="tech-tag">Computer Vision</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+
+    // Add active class to cards sequentially
+    const cards = document.querySelectorAll('.project-card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('active');
+        }, index * 150);
+    });
+});
+</script>
+{% endblock %}
