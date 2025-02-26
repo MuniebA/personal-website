@@ -1,0 +1,265 @@
+.home-page {
+    min-height: calc(100vh - 180px); /* Subtract navbar and footer height */
+    padding: 40px 0;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, var(--secondary-color), #64ffda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.project-section {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.project-section:hover {
+    transform: scale(1.02);
+}
+
+.content-overlay {
+    /* Remove mix-blend-mode */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: #64ffda;
+    pointer-events: none;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+}
+
+.project-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.project-description {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
+}
+
+.zoom-target {
+    position: relative;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.icon-container {
+    font-size: 4rem;
+    margin-top: 20px;
+    color: var(--secondary-color);
+}
+
+.ai-section {
+    background: linear-gradient(45deg, #1a1a2e, #16213e);
+}
+
+.software-section {
+    background: linear-gradient(45deg, #16213e, #1a1a2e);
+}
+
+.bio-section {
+    margin-top: 40px;
+}
+
+.bio-subtitle {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.typing-text {
+    border-right: 2px solid var(--secondary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.skill-pill {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-pill:hover {
+    background: rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
+.experience-timeline {
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+}
+
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    bottom: -24px;
+    width: 2px;
+    background: var(--secondary-color);
+    opacity: 0.3;
+}
+
+.project-card {
+    position: relative;
+    height: 300px;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: white;
+}
+
+.neural-network-animation,
+.code-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.neural-animation,
+.matrix-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.brain-container, .laptop-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+}
+
+.brain-container {
+    background: rgba(10, 25, 47, 0.3);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.laptop-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: transparent;
+    border-radius: 10px;
+    perspective: 1000px;
+}
+
+.laptop-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Animations */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--secondary-color) }
+}

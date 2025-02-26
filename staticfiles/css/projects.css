@@ -1,0 +1,131 @@
+/* Common styles for both AI and Software pages */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project-card {
+    position: relative;
+    background: rgba(10, 25, 47, 0.9);
+    border: 1px solid #64ffda33;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 300px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin: 0;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--secondary-color);
+}
+
+.project-summary {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    flex-grow: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--secondary-color);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ensure animations work properly */
+.scale-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Additional styles for specific pages if needed */
+.ai-page .project-card,
+.software-page .project-card {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+}
+
+.hero-title {
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
